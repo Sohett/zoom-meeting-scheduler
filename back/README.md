@@ -17,7 +17,8 @@ npm run dev:local
 ```
 
 ### 💻 Local keep alive Server
-Local server running on: `http://localhost:8080` with `npm run start`
+Local server running on: `http://localhost:8080` with
+```npm run start```
 
 Server is kept alive in order to be able to interact with it from the frontend Vue.js app in `dev`. Or with Postman 😉
 
