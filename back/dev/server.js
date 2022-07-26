@@ -1,11 +1,12 @@
 const path = require('path');
 const express = require('express');
 const cors = require('cors');
+var bodyParser = require('body-parser');
 const lambdaLocal = require('lambda-local');
 
 const app = express();
 
-app.use(express.text());
+app.use(bodyParser.json());
 app.use(cors());
 
 app.use('/zoom-meeting-creater', async (req, res) => {
@@ -16,7 +17,7 @@ app.use('/zoom-meeting-creater', async (req, res) => {
       envfile: path.join(__dirname, '../.env'),
       event: {
         headers: req.headers,
-        body: req.body,
+        body: JSON.stringify(req.body),
       },
     });
 
