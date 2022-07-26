@@ -1,6 +1,6 @@
 # zoom-meeting-scheduler-backend
 
-## Project setup
+## 🔌 Project setup
 1. Enter into the `back` folder
 2. Node version 16
 3. Add a `.env` in the back folder (same level as the package.json) with those keys (can be found on the [Server-to-Server OAuth](https://marketplace.zoom.us/develop/apps/F2lMl2mXRAmIiAalDGjQ5A/credentials))
@@ -11,17 +11,15 @@
 4. Run `npm install`
 
 
-### Local trigger of the code with
+### 🤓 Local trigger of the code with
 ```
 npm run dev:local
 ```
 
-### Local keep alive server (on: `http://localhost:8080`)
-```
-npm run start
-```
-To be kept open when playing with the frontend Vue.js app in `dev`. Or with Postman
+### 💻 Local keep alive Server
+Local server running on: `http://localhost:8080` with `npm run start`
 
-### Architectural choices and structure
+Server is kept alive in order to be able to interact with it from the frontend Vue.js app in `dev`. Or with Postman 😉
+
+### 📚 Architectural choices and structure
 On the [Notion page](https://thomassohet.notion.site/Technical-Challenge-674a66b9a25845938dcac1a4df4a3df3)
-

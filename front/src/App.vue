@@ -1,18 +1,17 @@
 <template>
-  <img
-    alt="Vue logo"
-    src="./assets/logo.png"
-  >
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    <h3>Book a Zoom meeting with Thomas Sohet</h3>
+    <Scheduler class="calendar" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Scheduler from './components/Scheduler.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    Scheduler,
   },
 };
 </script>
@@ -24,6 +23,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
+}
+
+.calendar {
+  margin: 0% 2% 2% 2%;
+  max-height: 90vh;
 }
 </style>
