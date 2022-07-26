@@ -7,7 +7,7 @@ const headers = {
 };
 
 exports.handler = async (event, context) => {
-  console.log(event);
+  console.log('[EVENT]', event);
 
   const { body } = event;
   let statusCode = 200;

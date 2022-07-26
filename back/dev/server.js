@@ -1,20 +1,23 @@
 const path = require('path');
 const express = require('express');
+const cors = require('cors');
+var bodyParser = require('body-parser');
 const lambdaLocal = require('lambda-local');
 
 const app = express();
 
-app.use(express.text());
+app.use(bodyParser.json());
+app.use(cors());
 
-app.use('/lambda', async (req, res) => {
+app.use('/zoom-meeting-creater', async (req, res) => {
   const result = await lambdaLocal
     .execute({
-      lambdaPath: path.join(__dirname, 'index'),
+      lambdaPath: path.join(__dirname, '../index'),
       lambdaHandler: 'handler',
-      envfile: path.join(__dirname, '.env'),
+      envfile: path.join(__dirname, '../.env'),
       event: {
         headers: req.headers,
-        body: req.body,
+        body: JSON.stringify(req.body),
       },
     });
 
