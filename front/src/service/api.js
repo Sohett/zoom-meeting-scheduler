@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const SERVER_URL = 'http://localhost:3000';
+const SERVER_URL = 'https://olp5ytqxm2.execute-api.eu-central-1.amazonaws.com/default';
 
 axios.interceptors.response.use(
   (response) => response.data,
