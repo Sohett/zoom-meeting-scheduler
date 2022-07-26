@@ -1,0 +1,22 @@
+{
+  "name": "zoom-meeting-scheduler-backend",
+  "description": "Node.js backend that will handle the scheduling of a Zoom meeting throught the Zoom API",
+  "main": "index.js",
+  "scripts": {
+    "dev:local": "node dev/local.js",
+    "dev:remote": "node dev/remote.js",
+    "lint": "eslint . --fix",
+    "deploy": "bash ./deploy.sh ZoomMeetingCreater"
+  },
+  "author": "Thomas Sohet",
+  "private": true,
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.101",
+    "dotenv": "^8.0.0",
+    "eslint": "^8.20.0"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "jsonschema": "^1.4.0"
+  }
+}
