@@ -1,7 +1,8 @@
+require('dotenv').config({ silent: true });
 const axios = require('axios');
 const data = JSON.stringify(require('./cases/1'));
 
-const REMOTE_SERVER_URI = '';
+const { REMOTE_SERVER_URI } = process.env;
 
 const options = {
   url: REMOTE_SERVER_URI,

@@ -1,6 +1,5 @@
-/* eslint-disable no-console */
 require('dotenv').config({ silent: true });
-/* eslint-disable no-console */
+
 const { handler } = require('../index');
 const data = JSON.stringify(require('./cases/1'));
 
