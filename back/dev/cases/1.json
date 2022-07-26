@@ -1,1 +1,5 @@
-{}
+{
+	"meetingStart": "2022-07-26T07:30:00+02:00",
+	"meetingDuration": 15,
+	"meetingTopic": "API test"
+}

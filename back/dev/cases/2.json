@@ -1,1 +1,5 @@
-{}
+{
+	"meetingStart": "2022-07-29T10:30:00+02:00",
+	"meetingDuration": null,
+	"meetingTopic": "Falsy API test"
+}

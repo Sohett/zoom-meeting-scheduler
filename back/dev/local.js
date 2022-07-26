@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 require('dotenv').config({ silent: true });
 /* eslint-disable no-console */
-import { handler } from '../dist/index';
-import event from ('./cases/1.json');
+const { handler } = require('../index');
+const data = JSON.stringify(require('./cases/1'));
 
-handler({ body: JSON.stringify(event) })
+handler({ body: data })
   .then((res) => console.log('\n\n', res));

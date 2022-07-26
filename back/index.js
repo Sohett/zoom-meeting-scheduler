@@ -1,5 +1,5 @@
-import { processRequest } from ('./src/processor');
-import { validatePayload } from ('./src/validator');
+const { processRequest } = require('./src/processor');
+const { validatePayload } = require('./src/validator');
 
 const headers = {
   'Content-Type': 'application/json',
@@ -14,9 +14,9 @@ exports.handler = async (event, context) => {
   let success = true;
   let message = 'success';
   let data = null;
-  const payload = JSON.parse(body);
 
   try {
+    const payload = JSON.parse(body);
     const { valid, errors } = validatePayload(payload);
     if (valid) {
       data = await processRequest(payload);
