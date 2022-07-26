@@ -8,7 +8,7 @@ import FullCalendar from '@fullcalendar/vue3';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
-import API from '@/service/api';
+import { meeting } from '@/service/meeting';
 
 export default {
   name: 'Scheduler',
@@ -45,24 +45,21 @@ export default {
       }
     },
     async handleConfirmBooking (topic, start, end) {
+      const { success, meetingInformation } = await meeting.create({ topic, start, end });
+
+      if (success) {
+        // eslint-disable-next-line no-alert
+        alert(`\n🎉 Booking successful!\n\n${meetingInformation}`);
+        this.addEventToCalendar(topic, start, end, meetingInformation);
+      } else {
+        // eslint-disable-next-line no-alert
+        alert('❌ Booking failed. 👨‍💻 Debugging info in the console.');
+      }
+    },
+    addEventToCalendar (topic, start, end, url) {
       this.calendarOptions.events.push({
-        title: topic, start, end,
+        title: topic, start, end, url,
       });
-
-      const meetingDuration = Math.abs((new Date(end)) - (new Date(start))) / 60000;
-
-      const payload = {
-        meetingStart: start,
-        meetingDuration,
-        meetingTopic: topic,
-      };
-
-      const { success } = await API.post('/zoom-meeting-creater', payload);
-
-      const meetingInformation = 'test';
-
-      // eslint-disable-next-line
-      success ? alert(`\n🎉 Booking successful!\n\n${meetingInformation}`) : alert('❌ Booking failed');
     },
   },
 };
