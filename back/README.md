@@ -8,6 +8,7 @@
   - `ZOOM_CLIENT_ID=${Client ID}`
   - `ZOOM_CLIENT_SECRET=${Client secret}`
   - `ZOOM_CREATE_MEETING_URI=ZOOM_CREATE_MEETING_URI=https://api.zoom.us/v2/users/EMQbJWvdSNi8hyk6-Fqk9w/meetings`
+3. Run `npm install`
 
 
 ### Local trigger of the code with
