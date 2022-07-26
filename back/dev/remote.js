@@ -1,5 +1,5 @@
-import axios from 'axios';
-import event from './cases/1.json';
+const axios = require('axios');
+const data = JSON.stringify(require('./cases/1'));
 
 const REMOTE_SERVER_URI = '';
 
@@ -9,7 +9,7 @@ const options = {
   headers: {
     'X-Api-Key': 'XXX',
   },
-  data: JSON.stringify(event),
+  data,
 };
 
 // eslint-disable-next-line no-console

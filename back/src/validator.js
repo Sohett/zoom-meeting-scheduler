@@ -1,10 +1,14 @@
-import { Validator } from 'jsonschema';
+const { Validator } = require('jsonschema');
 
 const schema = {
-  title: '',
+  title: 'ZoomMeetingCreater',
   type: 'object',
-  properties: {},
-  required: [],
+  properties: {
+    meetingStart: { type: 'string', format: 'date-time' },
+    meetingDuration: { type: 'integer', minimum: 1 },
+    meetingTopic: { type: 'string' },
+  },
+  required: ['meetingStart', 'meetingDuration', 'meetingTopic'],
 };
 
 const validatePayload = (payload) => {
