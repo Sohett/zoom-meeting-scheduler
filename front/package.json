@@ -1,5 +1,5 @@
 {
-  "name": "zoom-meeting-scheduler-front",
+  "name": "zoom-meeting-scheduler-frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
