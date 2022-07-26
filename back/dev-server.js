@@ -24,4 +24,4 @@ app.use('/lambda', async (req, res) => {
     .end(result.body);
 });
 
-app.listen(8080, () => console.log('listening on port: 8080'));
+app.listen(3000, () => console.log('listening on port: 3000'));
