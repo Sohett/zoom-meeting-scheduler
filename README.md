@@ -8,3 +8,6 @@ Doc: https://thomassohet.notion.site/Technical-Challenge-674a66b9a25845938dcac1a
 → `front`: a simple `Vue.js` app using the power of a nice open source project: [FullCalendar](https://github.com/fullcalendar/fullcalendar). This frontend app provides an interface to the client as a calendar in order to book a Zoom meeting with the owner of the `efounders.challenge@gmail.com` Zoom account.
 
  ⇨ Project can be tested [here](https://preeminent-lokum-b2816b.netlify.app/) (frontend deployed via Netlify)
+ 
+ 
+![Screenshot 2022-07-27 at 02 01 45](https://user-images.githubusercontent.com/29751630/181132545-208c682b-8ca7-4020-960c-45728ba1cb60.png)
