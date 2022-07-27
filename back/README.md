@@ -18,7 +18,7 @@ ZOOM_CREATE_MEETING_URI=ZOOM_CREATE_MEETING_URI=https://api.zoom.us/v2/users/EMQ
 npm run dev:local
 ```
 
-This will trigger a local call to lambda with a event simulating the payload. The event can be found in the `cases` [folder](https://github.com/Sohett/zoom-meeting-scheduler/tree/master/back/dev/cases)
+This will trigger a local call to the Node.js `index.js:handler` with an event passed as payload (as it would be on Lambda AWS). The event can be found in the `cases` [folder](https://github.com/Sohett/zoom-meeting-scheduler/tree/master/back/dev/cases)
 
 ### 💻 Local keep alive Server
 
